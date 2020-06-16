@@ -6,6 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ButtonPost {
+        "text": string;
+    }
+    interface GkHoly {
+    }
+    interface HomePost {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -19,6 +26,10 @@ export namespace Components {
           * The middle name
          */
         "middle": string;
+    }
+    interface PostCard {
+        "content": string;
+        "titulo": string;
     }
     interface ScrollAni {
         /**
@@ -44,11 +55,35 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLButtonPostElement extends Components.ButtonPost, HTMLStencilElement {
+    }
+    var HTMLButtonPostElement: {
+        prototype: HTMLButtonPostElement;
+        new (): HTMLButtonPostElement;
+    };
+    interface HTMLGkHolyElement extends Components.GkHoly, HTMLStencilElement {
+    }
+    var HTMLGkHolyElement: {
+        prototype: HTMLGkHolyElement;
+        new (): HTMLGkHolyElement;
+    };
+    interface HTMLHomePostElement extends Components.HomePost, HTMLStencilElement {
+    }
+    var HTMLHomePostElement: {
+        prototype: HTMLHomePostElement;
+        new (): HTMLHomePostElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLPostCardElement extends Components.PostCard, HTMLStencilElement {
+    }
+    var HTMLPostCardElement: {
+        prototype: HTMLPostCardElement;
+        new (): HTMLPostCardElement;
     };
     interface HTMLScrollAniElement extends Components.ScrollAni, HTMLStencilElement {
     }
@@ -57,11 +92,22 @@ declare global {
         new (): HTMLScrollAniElement;
     };
     interface HTMLElementTagNameMap {
+        "button-post": HTMLButtonPostElement;
+        "gk-holy": HTMLGkHolyElement;
+        "home-post": HTMLHomePostElement;
         "my-component": HTMLMyComponentElement;
+        "post-card": HTMLPostCardElement;
         "scroll-ani": HTMLScrollAniElement;
     }
 }
 declare namespace LocalJSX {
+    interface ButtonPost {
+        "text"?: string;
+    }
+    interface GkHoly {
+    }
+    interface HomePost {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -75,6 +121,10 @@ declare namespace LocalJSX {
           * The middle name
          */
         "middle"?: string;
+    }
+    interface PostCard {
+        "content"?: string;
+        "titulo"?: string;
     }
     interface ScrollAni {
         /**
@@ -99,7 +149,11 @@ declare namespace LocalJSX {
         "triggerDistance"?: string;
     }
     interface IntrinsicElements {
+        "button-post": ButtonPost;
+        "gk-holy": GkHoly;
+        "home-post": HomePost;
         "my-component": MyComponent;
+        "post-card": PostCard;
         "scroll-ani": ScrollAni;
     }
 }
@@ -107,7 +161,11 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "button-post": LocalJSX.ButtonPost & JSXBase.HTMLAttributes<HTMLButtonPostElement>;
+            "gk-holy": LocalJSX.GkHoly & JSXBase.HTMLAttributes<HTMLGkHolyElement>;
+            "home-post": LocalJSX.HomePost & JSXBase.HTMLAttributes<HTMLHomePostElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "post-card": LocalJSX.PostCard & JSXBase.HTMLAttributes<HTMLPostCardElement>;
             "scroll-ani": LocalJSX.ScrollAni & JSXBase.HTMLAttributes<HTMLScrollAniElement>;
         }
     }
