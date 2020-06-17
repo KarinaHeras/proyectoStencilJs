@@ -1,0 +1,44 @@
+
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+/* Columns using CSS Grid */
+
+		img{
+			object-fit: cover;
+			width: 100%;
+			border: 1px solid transparent;
+			transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+		}
+
+	:hover img {
+        filter: grayscale(0.75);
+        border-color: rgba(0, 0, 0, 0.2);
+				filter: grayscale(0);
+			}
+	
+
+
+
+/* Responsive Styling */
+@media only screen and (min-width: 960px) {
+	.columns {
+		column-count: 4;
+		column-width: 25%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.columns {
+		column-count: 2;
+		column-width: 50%;
+	}
+}
+@media only screen and (max-width: 479px) {
+	.columns {
+		column-count: 1;
+		column-width: 100%;
+	}
+}

@@ -6,14 +6,6 @@ body {
   background: #1e2023;
   font-family: var(--font);
 }
-.welcome {
-  background-color: white;
-  padding: 1em;
-  text-align: center;
-}
-.welcome-heading {
-  font-size: 3em;
-}
 .post {
  float: left;
  width: 31%;
@@ -34,16 +26,4 @@ body {
 }
 .content {
   padding: 1em;
-}
-.welcome a {
-  color: black;
-  text-decoration: none;
-  margin-left: 0.3em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 3px;
-}
-.welcome a:hover {
-  border-bottom: 1px solid black;
-  padding: 2px;
 }

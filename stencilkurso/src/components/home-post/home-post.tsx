@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Host } from '@stencil/core';
+import { Component, ComponentInterface, h } from '@stencil/core';
 
 @Component({
   tag: 'home-post',
@@ -9,7 +9,13 @@ export class HomePost implements ComponentInterface {
 
   render() {
     return (
-      <Host></Host>
+      <main>
+      <header><slot name="header" /></header>
+      <nav><slot name="nav" /></nav>
+      <section><slot name="section" /></section>
+      <aside><slot name="aside" /></aside>
+      <footer><slot name="footer" /></footer>
+    </main>
 
 //         <div id="welcome">
 //   <span class="welcome-heading">Welcome</span>

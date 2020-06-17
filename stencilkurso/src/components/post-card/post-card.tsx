@@ -19,6 +19,9 @@ export class PostCard implements ComponentInterface {
 
     <p>{this.titulo}</p>
     <p>{this.content}</p>
+    {/* <ion-avatar item-left>
+            <img src="https://source.unsplash.com/category/people/100x100">
+          </ion-avatar> */}
     </div>
     </Host>
 

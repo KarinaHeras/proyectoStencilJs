@@ -13,6 +13,8 @@ export namespace Components {
     }
     interface HomePost {
     }
+    interface MenuStx {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -73,6 +75,12 @@ declare global {
         prototype: HTMLHomePostElement;
         new (): HTMLHomePostElement;
     };
+    interface HTMLMenuStxElement extends Components.MenuStx, HTMLStencilElement {
+    }
+    var HTMLMenuStxElement: {
+        prototype: HTMLMenuStxElement;
+        new (): HTMLMenuStxElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -95,6 +103,7 @@ declare global {
         "button-post": HTMLButtonPostElement;
         "gk-holy": HTMLGkHolyElement;
         "home-post": HTMLHomePostElement;
+        "menu-stx": HTMLMenuStxElement;
         "my-component": HTMLMyComponentElement;
         "post-card": HTMLPostCardElement;
         "scroll-ani": HTMLScrollAniElement;
@@ -107,6 +116,8 @@ declare namespace LocalJSX {
     interface GkHoly {
     }
     interface HomePost {
+    }
+    interface MenuStx {
     }
     interface MyComponent {
         /**
@@ -152,6 +163,7 @@ declare namespace LocalJSX {
         "button-post": ButtonPost;
         "gk-holy": GkHoly;
         "home-post": HomePost;
+        "menu-stx": MenuStx;
         "my-component": MyComponent;
         "post-card": PostCard;
         "scroll-ani": ScrollAni;
@@ -164,6 +176,7 @@ declare module "@stencil/core" {
             "button-post": LocalJSX.ButtonPost & JSXBase.HTMLAttributes<HTMLButtonPostElement>;
             "gk-holy": LocalJSX.GkHoly & JSXBase.HTMLAttributes<HTMLGkHolyElement>;
             "home-post": LocalJSX.HomePost & JSXBase.HTMLAttributes<HTMLHomePostElement>;
+            "menu-stx": LocalJSX.MenuStx & JSXBase.HTMLAttributes<HTMLMenuStxElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "post-card": LocalJSX.PostCard & JSXBase.HTMLAttributes<HTMLPostCardElement>;
             "scroll-ani": LocalJSX.ScrollAni & JSXBase.HTMLAttributes<HTMLScrollAniElement>;
