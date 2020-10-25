@@ -1,0 +1,1 @@
+import{r as t,c as s,h as o}from"./p-ad871ed4.js";class n{constructor(o){t(this,o),this.boton=s(this,"boton",7)}llamarBoton(){this.boton.emit()}render(){return o("button",null,o("button",{class:"btn",onClick:()=>this.llamarBoton()}))}}n.style="";export{n as button_post}

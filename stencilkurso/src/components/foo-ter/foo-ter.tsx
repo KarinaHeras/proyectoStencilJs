@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Host } from '@stencil/core';
+import { Component, ComponentInterface, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'foo-ter',
@@ -6,16 +6,22 @@ import { Component, ComponentInterface, h, Host } from '@stencil/core';
   shadow: true,
 })
 export class FooTer implements ComponentInterface {
-
+  @Prop() nombre: string;
+  @Prop() copia: string;
+  @Prop() derechos: string;
+  @Prop() privado: string;
   render() {
     return (
       <Host>
         <slot>
-          <div class="pv4 ph3 ph5-m ph6-l mid-gray">
-	<small class="f6 db tc">© 2020 <b class="ttu">Karina Heras</b>Derechos reservados.</small>
-		<a href="/privacy/" title="Privacy" class="f6 dib ph2 link mid-gray dim">Privacy</a>
-	  </div>
-
+          <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+            <ul>
+        <li class="f6 dib ph2 link mid-gray dim">{this.nombre}</li>
+        <li class="f6 dib ph2 link mid-gray dim">{this.copia}</li>
+       <li class="f6 dib ph2 link mid-gray dim">{this.derechos}</li>
+       <li class="f6 dib ph2 link mid-gray dim">{this.privado}</li>
+       </ul>
+       </footer>
         </slot>
       </Host>
     );

@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from '@stencil/core';
+import { Component, ComponentInterface, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'button-post',
@@ -7,15 +7,17 @@ import { Component, ComponentInterface, h, Prop } from '@stencil/core';
 })
 export class ButtonPost implements ComponentInterface {
 
-  @Prop() text: string;
+  @Prop() detalles: string;
+  @Event() boton: EventEmitter;
 
+  llamarBoton(){
+    this.boton.emit();
+  }
   render() {
     return (
-      <div>
-        <button>{this.text}
-
-        </button>
-        </div>
+      <button>
+      <button class="btn" onClick={()=> this.llamarBoton()}></button>
+    </button>
     );
   }
 

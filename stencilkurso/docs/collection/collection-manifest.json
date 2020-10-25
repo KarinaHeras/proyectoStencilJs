@@ -1,0 +1,19 @@
+{
+  "entries": [
+    "./components/button-post/button-post.js",
+    "./components/foo-ter/foo-ter.js",
+    "./components/gk-holy/gk-holy.js",
+    "./components/home-post/home-post.js",
+    "./components/menu-stx/menu-stx.js",
+    "./components/my-component/my-component.js",
+    "./components/post-card/post-card.js",
+    "./components/post-detail/post-detail.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.14.0",
+    "typescriptVersion": "3.9.3"
+  },
+  "collections": [],
+  "bundles": []
+}

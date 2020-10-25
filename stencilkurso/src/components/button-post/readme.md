@@ -7,9 +7,16 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `text`   | `text`    |             | `string` | `undefined` |
+| Property   | Attribute  | Description | Type     | Default     |
+| ---------- | ---------- | ----------- | -------- | ----------- |
+| `detalles` | `detalles` |             | `string` | `undefined` |
+
+
+## Events
+
+| Event   | Description | Type               |
+| ------- | ----------- | ------------------ |
+| `boton` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

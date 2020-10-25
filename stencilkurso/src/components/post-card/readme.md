@@ -7,10 +7,19 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type     | Default     |
-| --------- | --------- | ----------- | -------- | ----------- |
-| `content` | `content` |             | `string` | `undefined` |
-| `titulo`  | `titulo`  |             | `string` | `undefined` |
+| Property    | Attribute   | Description | Type     | Default     |
+| ----------- | ----------- | ----------- | -------- | ----------- |
+| `_id`       | `_id`       |             | `string` | `undefined` |
+| `contenido` | `contenido` |             | `string` | `undefined` |
+| `nombre`    | `nombre`    |             | `string` | `undefined` |
+| `titulo`    | `titulo`    |             | `string` | `undefined` |
+
+
+## Events
+
+| Event   | Description | Type               |
+| ------- | ----------- | ------------------ |
+| `boton` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

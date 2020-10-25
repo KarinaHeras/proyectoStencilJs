@@ -7,7 +7,13 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ButtonPost {
-        "text": string;
+        "detalles": string;
+    }
+    interface FooTer {
+        "copia": string;
+        "derechos": string;
+        "nombre": string;
+        "privado": string;
     }
     interface GkHoly {
     }
@@ -30,30 +36,16 @@ export namespace Components {
         "middle": string;
     }
     interface PostCard {
-        "content": string;
+        "_id": string;
+        "contenido": string;
+        "nombre": string;
         "titulo": string;
     }
-    interface ScrollAni {
-        /**
-          * How far the element moves in the animation (% of element width/height)
-         */
-        "animationDistance": string;
-        /**
-          * How long to delay the animation (ms)
-         */
-        "delay": number;
-        /**
-          * Direction the element moves when animating in
-         */
-        "direction": "up" | "down" | "right" | "left";
-        /**
-          * How long the animation runs (ms)
-         */
-        "duration": number;
-        /**
-          * How much of the element must be visible before it animates (% of element height)
-         */
-        "triggerDistance": string;
+    interface PostDetail {
+        "_id": string;
+        "comentario": string;
+        "nickname": string;
+        "titulo": string;
     }
 }
 declare global {
@@ -62,6 +54,12 @@ declare global {
     var HTMLButtonPostElement: {
         prototype: HTMLButtonPostElement;
         new (): HTMLButtonPostElement;
+    };
+    interface HTMLFooTerElement extends Components.FooTer, HTMLStencilElement {
+    }
+    var HTMLFooTerElement: {
+        prototype: HTMLFooTerElement;
+        new (): HTMLFooTerElement;
     };
     interface HTMLGkHolyElement extends Components.GkHoly, HTMLStencilElement {
     }
@@ -93,25 +91,33 @@ declare global {
         prototype: HTMLPostCardElement;
         new (): HTMLPostCardElement;
     };
-    interface HTMLScrollAniElement extends Components.ScrollAni, HTMLStencilElement {
+    interface HTMLPostDetailElement extends Components.PostDetail, HTMLStencilElement {
     }
-    var HTMLScrollAniElement: {
-        prototype: HTMLScrollAniElement;
-        new (): HTMLScrollAniElement;
+    var HTMLPostDetailElement: {
+        prototype: HTMLPostDetailElement;
+        new (): HTMLPostDetailElement;
     };
     interface HTMLElementTagNameMap {
         "button-post": HTMLButtonPostElement;
+        "foo-ter": HTMLFooTerElement;
         "gk-holy": HTMLGkHolyElement;
         "home-post": HTMLHomePostElement;
         "menu-stx": HTMLMenuStxElement;
         "my-component": HTMLMyComponentElement;
         "post-card": HTMLPostCardElement;
-        "scroll-ani": HTMLScrollAniElement;
+        "post-detail": HTMLPostDetailElement;
     }
 }
 declare namespace LocalJSX {
     interface ButtonPost {
-        "text"?: string;
+        "detalles"?: string;
+        "onBoton"?: (event: CustomEvent<any>) => void;
+    }
+    interface FooTer {
+        "copia"?: string;
+        "derechos"?: string;
+        "nombre"?: string;
+        "privado"?: string;
     }
     interface GkHoly {
     }
@@ -134,39 +140,27 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface PostCard {
-        "content"?: string;
+        "_id"?: string;
+        "contenido"?: string;
+        "nombre"?: string;
+        "onBoton"?: (event: CustomEvent<any>) => void;
         "titulo"?: string;
     }
-    interface ScrollAni {
-        /**
-          * How far the element moves in the animation (% of element width/height)
-         */
-        "animationDistance"?: string;
-        /**
-          * How long to delay the animation (ms)
-         */
-        "delay"?: number;
-        /**
-          * Direction the element moves when animating in
-         */
-        "direction"?: "up" | "down" | "right" | "left";
-        /**
-          * How long the animation runs (ms)
-         */
-        "duration"?: number;
-        /**
-          * How much of the element must be visible before it animates (% of element height)
-         */
-        "triggerDistance"?: string;
+    interface PostDetail {
+        "_id"?: string;
+        "comentario"?: string;
+        "nickname"?: string;
+        "titulo"?: string;
     }
     interface IntrinsicElements {
         "button-post": ButtonPost;
+        "foo-ter": FooTer;
         "gk-holy": GkHoly;
         "home-post": HomePost;
         "menu-stx": MenuStx;
         "my-component": MyComponent;
         "post-card": PostCard;
-        "scroll-ani": ScrollAni;
+        "post-detail": PostDetail;
     }
 }
 export { LocalJSX as JSX };
@@ -174,12 +168,13 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "button-post": LocalJSX.ButtonPost & JSXBase.HTMLAttributes<HTMLButtonPostElement>;
+            "foo-ter": LocalJSX.FooTer & JSXBase.HTMLAttributes<HTMLFooTerElement>;
             "gk-holy": LocalJSX.GkHoly & JSXBase.HTMLAttributes<HTMLGkHolyElement>;
             "home-post": LocalJSX.HomePost & JSXBase.HTMLAttributes<HTMLHomePostElement>;
             "menu-stx": LocalJSX.MenuStx & JSXBase.HTMLAttributes<HTMLMenuStxElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "post-card": LocalJSX.PostCard & JSXBase.HTMLAttributes<HTMLPostCardElement>;
-            "scroll-ani": LocalJSX.ScrollAni & JSXBase.HTMLAttributes<HTMLScrollAniElement>;
+            "post-detail": LocalJSX.PostDetail & JSXBase.HTMLAttributes<HTMLPostDetailElement>;
         }
     }
 }

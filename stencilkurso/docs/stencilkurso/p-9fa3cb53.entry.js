@@ -1,0 +1,1 @@
+import{r as o,h as r}from"./p-ad871ed4.js";class s{constructor(r){o(this,r)}render(){return r("main",null)}}s.style="body{-webkit-box-sizing:border-box;box-sizing:border-box}:host{display:block}";export{s as home_post}
